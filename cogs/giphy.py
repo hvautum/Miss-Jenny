@@ -23,7 +23,7 @@ class Giphy(commands.Cog):
             embed.set_image(url=data['data']['images']['original']['url'])
         else:
             search.replace(' ', '+')
-            response = await session.get('https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key="API_KEY_GOES_HERE"=10')
+            response = await session.get('https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key="API_KEY_GOES_HERE"&limit=10')
             data = json.loads(await response.text())
             gif_choice = random.randint(0,9)
             embed.set_image(url=data['data'][gif_choice]['images']['original']['url'])
