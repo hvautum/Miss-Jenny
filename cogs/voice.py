@@ -100,7 +100,10 @@ async def queue_voice(self, server, channel, message):
         if voice and voice.is_connected():
             await voice.move_to(new_channel)
         else:
-            voice = await new_channel.connect()
+            try:
+                voice = await new_channel.connect()
+            except discord.errors.ClientException:
+                print("error")
         if len(voice.channel.members) > 1:
             voice.play(discord.FFmpegPCMAudio(filename), after=None)
             voice.source = discord.PCMVolumeTransformer(voice.source)
@@ -116,7 +119,7 @@ async def queue_voice(self, server, channel, message):
 async def thank_for_service(self, member, server, channel):
     chance_thank = random.randint(0,1)
     if chance_thank >= 1:
-        with open('C:\\Users\\tetrisnext\\Google Drive\MissJenny\\assets\\thank_for_service.txt', "r") as f:
+        with open('./assets/thank_for_service.txt', "r") as f:
             num_lines = 0
             for line in f:
                 num_lines += 1

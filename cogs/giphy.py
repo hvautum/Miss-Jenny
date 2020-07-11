@@ -3,7 +3,10 @@ import json
 import aiohttp
 import random
 from bot_preferences import spam_channels
+from bot_preferences import giphy_api_key
 from discord.ext import commands
+
+
 
 class Giphy(commands.Cog):
 
@@ -18,12 +21,12 @@ class Giphy(commands.Cog):
         session = aiohttp.ClientSession()
 
         if search == '':
-            response = await session.get('https://giphy.com/v1/gifs/random?api_key="API_KEY_GOES_HERE"')
+            response = await session.get(f'https://giphy.com/v1/gifs/random?api_key={giphy_api_key}')
             data = json.loads(await response.text())
             embed.set_image(url=data['data']['images']['original']['url'])
         else:
             search.replace(' ', '+')
-            response = await session.get('https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key="API_KEY_GOES_HERE"&limit=10')
+            response = await session.get('https://api.giphy.com/v1/gifs/search?q=' + search + f'&api_key={giphy_api_key}&limit=10')
             data = json.loads(await response.text())
             gif_choice = random.randint(0,9)
             embed.set_image(url=data['data'][gif_choice]['images']['original']['url'])

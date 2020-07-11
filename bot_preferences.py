@@ -1,8 +1,11 @@
 import discord
+import os
 
 spam_channels = {}
-bot_token = 'TOKEN GOES HERE'
-bot_ID = BOT ID GOES HERE
+
+bot_token = os.environ.get("BOT_TOKEN")
+bot_ID = int(os.environ.get("BOT_ID"))
+giphy_api_key = os.environ.get("GIPHY_API_KEY")
 
 
 async def upd_console(ctx, message):
