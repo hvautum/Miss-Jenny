@@ -113,13 +113,16 @@ async def del_console(ctx):
 @client.event
 async def on_ready():
     #PREFERENCES LOAD ON STARTUP
-    with open("preferences.txt", "r") as f:
-        for line in f:
-            server_get = line.split(':')
-            channel = server_get[1].split('\n')
-            channel_act = client.get_channel(int(channel[0]))
-            spam_channels.update({int(server_get[0]):channel_act})
-    print('Preferences.txt Loaded.')
+    try:
+        with open("preferences.txt", "r") as f:
+            for line in f:
+                server_get = line.split(':')
+                channel = server_get[1].split('\n')
+                channel_act = client.get_channel(int(channel[0]))
+                spam_channels.update({int(server_get[0]):channel_act})
+        print('Preferences.txt Loaded.')
+    except:
+        print('Preferences.txt Not Found.')
     #SPLASH MESSAGE
     await client.change_presence(status=discord.Status.idle, activity=discord.Game('Global Thermonuclear War'))
     print("""
