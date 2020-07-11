@@ -3,36 +3,17 @@
 
 Miss Jenny is a discord bot created in python using discord.py to improve the quality of life of managing a discord server. The bot can use a variety of functions, each requiring installation of their own dependencies, should they be included in the cogs folder.
 
-## License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 ## Installation
-Development was on a windows10 64 bit machine in a PowerShell. Examples of installation for other operating systems can be found in the provided documentation links.
+This bot was developed in a PowerShell on a Windows 10 (64 bit) machine. Examples of installation for other operating systems can be found in the provided documentation links.
 
-###Chocolatey
-Chocolatey was used to install some of the cog dependencies from github as their python libraries were not updated properly. It may also be used to get python. https://chocolatey.org/
+### Chocolatey
+Chocolatey was used to install some of the cog dependencies from github as their pip libraries were out of date. It may also be used to get python. https://chocolatey.org/
 
 ### Python 3.8+
 Miss Jenny requires python 3.8 or higher. https://www.python.org/downloads/
-> You may download and manually install the folder, however this may require you to perform extra work in setting up paths for using pip to install python libraries.
-> It may be easier to search for the latest version of python on the Windows Store and install it there. Remember to verify the publisher and version.
+
+You may download and manually install the folder, however this may require you to perform extra work in setting up paths for using pip to install python libraries.
+It may be easier to search for the latest version of python on the Windows Store and install it there. Remember to verify the publisher and version.
 
 ### Discord.py
 Miss Jenny runs using discord.py 1.40a+. https://github.com/Rapptz/discord.py
