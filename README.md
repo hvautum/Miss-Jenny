@@ -42,8 +42,15 @@ for FFmpeg https://ffmpeg.org/
 >pip install ffmpeg
 
 
-Note: The giphy cog will require you to input your own api key for their website into the giphy.py file.
-Note: You will have to generate your own bot Token for discord. https://discordpy.readthedocs.io/en/latest/discord.html
+### Notes
+1. The giphy cog will require you to input your own api key for their website into the giphy.py file.
+
+2. You will have to generate your own bot Token for discord. https://discordpy.readthedocs.io/en/latest/discord.html
+
+3. You may have to grab the bot ID from discord (in developer mode) https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
+
+4. You may wish to set the relevant enviornment variables in your OS to hide the bot token, bot ID, and api keys in bot_preferences.py. Alternatively, you can just declare them in the file to get the bot working with minimal effort.
+
 
 
 ## Usage
