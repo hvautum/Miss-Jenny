@@ -37,6 +37,7 @@ Miss Jenny requires python 3.8 or higher. https://www.python.org/downloads/
 ### Discord.py
 Miss Jenny runs using discord.py 1.40a+. https://github.com/Rapptz/discord.py
 > python -3 -m pip install -U discord.py
+
 or for voice support:
 > python -3 -m pip install -U discord.py[voice]
 
@@ -51,7 +52,7 @@ If you are using chocolaty you may want to install git from an PowerShell with a
 >pip install git+https://github.com/bocong/urbandictionary-py.git
 
 
-### gTTS.py and FFmpeg.py for Voice
+### Voice.py
 Voice functionality uses gTTS and FFMPEG to convert text to speech and subsequently play it.
 for gTTS https://pypi.org/project/gTTS/
 >pip install gTTS
@@ -74,6 +75,7 @@ The bot will load preferences for what channel is designated in via the !set_con
 
 
 ### Commands
+*Commands may be altered frequently throughout development and as such, this section may be out of date*
 Commands are entered in a discord server the bot is active in. Note that it may be useful to use the !set_console command to dump relevant administrative information into such as who called certain commands or what arguments were used to search for something.
 
 Core Commands
